@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StatDefinitions>
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Water</SubtypeId>
+      </Id>
+      <Name>Water</Name>
+      <MinValue>0</MinValue>
+      <DefaultValue>30</DefaultValue>
+      <MaxValue>100</MaxValue>
+    </Stat>
+  </StatDefinitions>
+</Definitions>
