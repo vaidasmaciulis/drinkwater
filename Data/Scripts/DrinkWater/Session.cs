@@ -13,23 +13,20 @@ namespace DrinkWater
 	[MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
 	public class Session : MySessionComponentBase
 	{
-		private const int SKIP_TICKS = 300;
+		private const int TICKS_TO_SKIP = 300;
 		private const float WATER_USAGE = 0.1f;
-		private const float WATER_DAMAGE = 0.1f;
+		private const float WATER_DAMAGE = 0.5f;
 		
 		private static List<IMyPlayer> players = new List<IMyPlayer>();
-		private static int skipTick = 0;
+		private static int skippedTicks = 0;
 
         public override void UpdateAfterSimulation()
         {
-			if (skipTick++ <= SKIP_TICKS)
+			if (skippedTicks++ < TICKS_TO_SKIP)
             {
 				return;
             } 
-			else
-            {
-				skipTick = 0;
-			}
+			skippedTicks = 0;
 
 			players.Clear();
 			MyAPIGateway.Players.GetPlayers(players);
@@ -40,6 +37,7 @@ namespace DrinkWater
 
 				MyEntityStatComponent statComp;
 				entity.Components.TryGet(out statComp);
+
 				MyEntityStat water;
 				statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
 

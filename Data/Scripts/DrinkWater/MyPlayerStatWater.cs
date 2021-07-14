@@ -26,7 +26,9 @@ namespace DrinkWater
             protected set
             {
                 if (m_currentValue == value)
+                { 
                     return;
+                }
                 m_currentValue = value;
                 m_valueStringCache = null;
             }
@@ -38,7 +40,9 @@ namespace DrinkWater
         public string GetValueString()
         {
             if (m_valueStringCache == null)
+            { 
                 m_valueStringCache = ToString();
+            }
             return m_valueStringCache;
         }
 
@@ -52,7 +56,9 @@ namespace DrinkWater
             MyEntityStatComponent statComp;
             entity.Components.TryGet(out statComp);
             if (player == null || statComp == null)
+            { 
                 return;
+            }
             MyEntityStat water;
             statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
             CurrentValue = water.Value / water.MaxValue;
