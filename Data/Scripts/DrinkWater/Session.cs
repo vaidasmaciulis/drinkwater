@@ -11,7 +11,7 @@ using VRage.Utils;
 namespace DrinkWater
 {
 	[MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-	public class Server : MySessionComponentBase
+	public class Session : MySessionComponentBase
 	{
 		private const int SKIP_TICKS = 300;
 		private const float WATER_USAGE = 0.1f;
