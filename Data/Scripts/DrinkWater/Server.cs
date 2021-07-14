@@ -14,16 +14,14 @@ namespace DrinkWater
 	public class Server : MySessionComponentBase
 	{
 		private const int SKIP_TICKS = 300;
-		private const float WATER_USAGE = 0.5f;
+		private const float WATER_USAGE = 0.1f;
 		private const float WATER_DAMAGE = 0.1f;
 		
 		private static List<IMyPlayer> players = new List<IMyPlayer>();
 		private static int skipTick = 0;
 
-		public override void UpdateAfterSimulation()
+        public override void UpdateAfterSimulation()
         {
-            //base.UpdateAfterSimulation();
-
 			if (skipTick++ <= SKIP_TICKS)
             {
 				return;
@@ -48,7 +46,6 @@ namespace DrinkWater
 				if (water.Value > 0)
 				{
 					water.Decrease(WATER_USAGE, null);
-					MyAPIGateway.Utilities.ShowMessage("DEBUG", "Water: " + water.Value);
 				}
 
 				if (water.Value <= 0)
