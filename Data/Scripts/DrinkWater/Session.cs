@@ -35,16 +35,14 @@ namespace DrinkWater
 					string objectIdString = item.Content.GetObjectId().ToString();
 					if (objectIdString.Contains("ClangCola") || objectIdString.Contains("CosmicCoffee"))
 					{
-						IMyEntity entity = player.Controller.ControlledEntity.Entity;
-						MyEntityStat water = GetEntityWaterStat(entity);
+						MyEntityStat water = GetPlayerWaterStat(player);
 
 						//Make sure it was not just removing drinks from inventory
 						if (water.HasAnyEffect())
                         {
-							VRage.Game.ModAPI.Interfaces.IMyControllableEntity ce = entity as VRage.Game.ModAPI.Interfaces.IMyControllableEntity;
-							if (ce.EnabledHelmet)
+							if (player.Character.EnabledHelmet)
 							{
-								ce.SwitchHelmet();
+								player.Character.SwitchHelmet();
 								MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
 							}
 						}
@@ -68,7 +66,7 @@ namespace DrinkWater
             {
                 IMyEntity entity = player.Controller.ControlledEntity.Entity;
 
-				MyEntityStat water = GetEntityWaterStat(entity);
+				MyEntityStat water = GetPlayerWaterStat(player);
 
 				if (water.Value > 0)
 				{
@@ -84,10 +82,10 @@ namespace DrinkWater
 
 		}
 
-		private MyEntityStat GetEntityWaterStat(IMyEntity entity)
-        {
+		private MyEntityStat GetPlayerWaterStat(IMyPlayer player)
+		{
 			MyEntityStatComponent statComp;
-			entity.Components.TryGet(out statComp);
+			player.Character.Components.TryGet(out statComp);
 
 			MyEntityStat water;
 			statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
