@@ -3,6 +3,7 @@ using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
 using VRage.Game.Components;
+using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Interfaces;
 using VRage.ModAPI;
@@ -20,7 +21,39 @@ namespace DrinkWater
 		private static List<IMyPlayer> players = new List<IMyPlayer>();
 		private static int skippedTicks = 0;
 
-        public override void UpdateAfterSimulation()
+		public override void BeforeStart()
+		{
+			base.BeforeStart();
+
+            players.Clear();
+            MyAPIGateway.Players.GetPlayers(players);
+			foreach (IMyPlayer player in players)
+			{
+				MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
+				inventory.ContentsRemoved += (item, point) =>
+				{
+					string objectIdString = item.Content.GetObjectId().ToString();
+					if (objectIdString.Contains("ClangCola") || objectIdString.Contains("CosmicCoffee"))
+					{
+						IMyEntity entity = player.Controller.ControlledEntity.Entity;
+						MyEntityStat water = GetEntityWaterStat(entity);
+
+						//Make sure it was not just removing drinks from inventory
+						if (water.HasAnyEffect())
+                        {
+							VRage.Game.ModAPI.Interfaces.IMyControllableEntity ce = entity as VRage.Game.ModAPI.Interfaces.IMyControllableEntity;
+							if (ce.EnabledHelmet)
+							{
+								ce.SwitchHelmet();
+								MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
+							}
+						}
+					}
+				};
+            }
+        }
+
+		public override void UpdateAfterSimulation()
         {
 			if (skippedTicks++ < TICKS_TO_SKIP)
             {
@@ -33,13 +66,9 @@ namespace DrinkWater
 
 			foreach (IMyPlayer player in players)
             {
-				IMyEntity entity = player.Controller.ControlledEntity.Entity;
+                IMyEntity entity = player.Controller.ControlledEntity.Entity;
 
-				MyEntityStatComponent statComp;
-				entity.Components.TryGet(out statComp);
-
-				MyEntityStat water;
-				statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
+				MyEntityStat water = GetEntityWaterStat(entity);
 
 				if (water.Value > 0)
 				{
@@ -54,5 +83,15 @@ namespace DrinkWater
 			}
 
 		}
-    }
+
+		private MyEntityStat GetEntityWaterStat(IMyEntity entity)
+        {
+			MyEntityStatComponent statComp;
+			entity.Components.TryGet(out statComp);
+
+			MyEntityStat water;
+			statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
+			return water;
+		}
+	}
 }
