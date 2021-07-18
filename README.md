@@ -4,6 +4,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 UPDATE 7/18/2021:
 
 - Fixed crash when entering cockpit
+- Fixed 2 more bugs related to cockpit/seats
 - Helmet now opens automatically when you drinking something. Drink responsibly when in outer space!
 
 

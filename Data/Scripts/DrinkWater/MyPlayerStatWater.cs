@@ -57,6 +57,7 @@ namespace DrinkWater
             MyAPIGateway.Players.GetPlayers(players);
             IMyPlayer player = players[0];
             this.CurrentValue = player.Character.GetSuitGasFillLevel(new MyDefinitionId(typeof(MyObjectBuilder_GasProperties), "Water"));
+
         }
 
         public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
