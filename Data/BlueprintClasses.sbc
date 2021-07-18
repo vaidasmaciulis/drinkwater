@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlueprintClasses>
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>WaterBottles</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_BlueprintClass_WaterBottles</DisplayName>
+            <Description>Description_BlueprintClass_WaterBottles</Description>
+            <Icon>Textures\GUI\Icons\ore_H2O_ice.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\large_block.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\large_block_focus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+  </BlueprintClasses>
+  <BlueprintClassEntries>
+    <Entry Class="Tools" BlueprintSubtypeId="WaterBottle" />
+    <Entry Class="EliteTools" BlueprintSubtypeId="WaterBottle" />
+    <Entry Class="WaterBottles" BlueprintSubtypeId="WaterBottlesRefill" />
+  </BlueprintClassEntries>
+</Definitions>

@@ -1,11 +1,14 @@
 ﻿using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
+using Sandbox.Game.Entities.Character;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
+using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Interfaces;
+using VRage.Game.ObjectBuilders.Definitions;
 using VRage.ModAPI;
 using VRage.Utils;
 
@@ -67,6 +70,12 @@ namespace DrinkWater
                 IMyEntity entity = player.Controller.ControlledEntity.Entity;
 
                 MyEntityStat water = GetPlayerWaterStat(player);
+
+                MyDefinitionId waterId = new MyDefinitionId(typeof(MyObjectBuilder_GasProperties), "Water");
+                float waterLevel = player.Character.GetSuitGasFillLevel(waterId);
+
+                //TODO MyCharacter is prohibited, need to find workaround
+                (player.Character as MyCharacter).UpdateStoredGas(waterId, waterLevel - WATER_USAGE);
 
                 if (water.Value > 0)
                 {

@@ -1,9 +1,14 @@
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
+using Sandbox.Game.Entities.Character;
+using Sandbox.Game.World;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
+using VRage.Game;
 using VRage.Game.ModAPI;
+using VRage.Game.ObjectBuilders.Definitions;
 using VRage.ModAPI;
+using VRage.ObjectBuilders;
 using VRage.Utils;
 
 namespace DrinkWater
@@ -51,17 +56,7 @@ namespace DrinkWater
             List<IMyPlayer> players = new List<IMyPlayer>();
             MyAPIGateway.Players.GetPlayers(players);
             IMyPlayer player = players[0];
-            IMyEntity entity = player.Controller.ControlledEntity.Entity;
-
-            MyEntityStatComponent statComp;
-            entity.Components.TryGet(out statComp);
-            if (player == null || statComp == null)
-            {
-                return;
-            }
-            MyEntityStat water;
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
-            CurrentValue = water.Value / water.MaxValue;
+            this.CurrentValue = player.Character.GetSuitGasFillLevel(new MyDefinitionId(typeof(MyObjectBuilder_GasProperties), "Water"));
         }
 
         public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));

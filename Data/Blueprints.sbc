@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>WaterBottlesRefill</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_WaterBottles</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="GasContainerObject" SubtypeId="WaterBottle" />
+      </Prerequisites>
+      <Result Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+      <BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>WaterBottle</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_WaterBottle</DisplayName>
+      <Icon>Textures\GUI\Icons\component\HydrogenBottle_Component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="80" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+        <Item Amount="30" TypeId="Ingot" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="GasContainerObject" SubtypeId="WaterBottle" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+  </Blueprints>
+</Definitions>
