@@ -51,10 +51,10 @@ namespace DrinkWater
             List<IMyPlayer> players = new List<IMyPlayer>();
             MyAPIGateway.Players.GetPlayers(players);
             IMyPlayer player = players[0];
-            IMyEntity entity = player.Controller.ControlledEntity.Entity;
 
             MyEntityStatComponent statComp;
-            entity.Components.TryGet(out statComp);
+            player.Character.Components.TryGet(out statComp);
+
             if (player == null || statComp == null)
             {
                 return;

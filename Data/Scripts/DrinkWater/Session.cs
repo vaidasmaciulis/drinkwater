@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
-using VRage.Game.ModAPI.Interfaces;
-using VRage.ModAPI;
 using VRage.Utils;
 
 namespace DrinkWater
@@ -64,8 +62,6 @@ namespace DrinkWater
 
             foreach (IMyPlayer player in players)
             {
-                IMyEntity entity = player.Controller.ControlledEntity.Entity;
-
                 MyEntityStat water = GetPlayerWaterStat(player);
 
                 if (water.Value > 0)
@@ -75,8 +71,7 @@ namespace DrinkWater
 
                 if (water.Value <= 0)
                 {
-                    var destroyable = entity as IMyDestroyableObject;
-                    destroyable.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                    player.Character.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
                 }
             }
         }
