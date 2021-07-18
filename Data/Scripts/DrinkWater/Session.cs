@@ -11,85 +11,84 @@ using VRage.Utils;
 
 namespace DrinkWater
 {
-	[MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-	public class Session : MySessionComponentBase
-	{
-		private const int TICKS_TO_SKIP = 300;
-		private const float WATER_USAGE = 0.1f;
-		private const float WATER_DAMAGE = 0.5f;
-		
-		private static List<IMyPlayer> players = new List<IMyPlayer>();
-		private static int skippedTicks = 0;
+    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
+    public class Session : MySessionComponentBase
+    {
+        private const int TICKS_TO_SKIP = 300;
+        private const float WATER_USAGE = 0.1f;
+        private const float WATER_DAMAGE = 0.5f;
 
-		public override void BeforeStart()
-		{
-			base.BeforeStart();
+        private static List<IMyPlayer> players = new List<IMyPlayer>();
+        private static int skippedTicks = 0;
+
+        public override void BeforeStart()
+        {
+            base.BeforeStart();
 
             players.Clear();
             MyAPIGateway.Players.GetPlayers(players);
-			foreach (IMyPlayer player in players)
-			{
-				MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
-				inventory.ContentsRemoved += (item, point) =>
-				{
-					string objectIdString = item.Content.GetObjectId().ToString();
-					if (objectIdString.Contains("ClangCola") || objectIdString.Contains("CosmicCoffee"))
-					{
-						MyEntityStat water = GetPlayerWaterStat(player);
+            foreach (IMyPlayer player in players)
+            {
+                MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
+                inventory.ContentsRemoved += (item, point) =>
+                {
+                    string objectIdString = item.Content.GetObjectId().ToString();
+                    if (objectIdString.Contains("ClangCola") || objectIdString.Contains("CosmicCoffee"))
+                    {
+                        MyEntityStat water = GetPlayerWaterStat(player);
 
-						//Make sure it was not just removing drinks from inventory
-						if (water.HasAnyEffect())
+                        //Make sure it was not just removing drinks from inventory
+                        if (water.HasAnyEffect())
                         {
-							if (player.Character.EnabledHelmet)
-							{
-								player.Character.SwitchHelmet();
-								MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
-							}
-						}
-					}
-				};
+                            if (player.Character.EnabledHelmet)
+                            {
+                                player.Character.SwitchHelmet();
+                                MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
+                            }
+                        }
+                    }
+                };
             }
         }
 
-		public override void UpdateAfterSimulation()
+        public override void UpdateAfterSimulation()
         {
-			if (skippedTicks++ < TICKS_TO_SKIP)
+            if (skippedTicks++ < TICKS_TO_SKIP)
             {
-				return;
-            } 
-			skippedTicks = 0;
+                return;
+            }
+            skippedTicks = 0;
 
-			players.Clear();
-			MyAPIGateway.Players.GetPlayers(players);
+            players.Clear();
+            MyAPIGateway.Players.GetPlayers(players);
 
-			foreach (IMyPlayer player in players)
+            foreach (IMyPlayer player in players)
             {
                 IMyEntity entity = player.Controller.ControlledEntity.Entity;
 
-				MyEntityStat water = GetPlayerWaterStat(player);
+                MyEntityStat water = GetPlayerWaterStat(player);
 
-				if (water.Value > 0)
-				{
-					water.Decrease(WATER_USAGE, null);
-				}
+                if (water.Value > 0)
+                {
+                    water.Decrease(WATER_USAGE, null);
+                }
 
-				if (water.Value <= 0)
-				{
-					var destroyable = entity as IMyDestroyableObject;
-					destroyable.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
-				}
-			}
+                if (water.Value <= 0)
+                {
+                    var destroyable = entity as IMyDestroyableObject;
+                    destroyable.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                }
+            }
+        }
 
-		}
+        private MyEntityStat GetPlayerWaterStat(IMyPlayer player)
+        {
+            MyEntityStatComponent statComp;
+            player.Character.Components.TryGet(out statComp);
 
-		private MyEntityStat GetPlayerWaterStat(IMyPlayer player)
-		{
-			MyEntityStatComponent statComp;
-			player.Character.Components.TryGet(out statComp);
-
-			MyEntityStat water;
-			statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
-			return water;
-		}
-	}
+            MyEntityStat water;
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
+            return water;
+        }
+    }
 }
