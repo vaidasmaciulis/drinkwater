@@ -1,6 +1,10 @@
 # drinkwater
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 7/19/2021:
+
+- Fresh and Cold Sparkling Water is now available at the nearest assembler!
+
 UPDATE 7/18/2021:
 
 - Fixed crash when entering cockpit
@@ -13,6 +17,9 @@ Have to keep hydrated!
 
 Water stat is added, which will result in serious health issues for the engineer when depleted.
 
-The only way to restore water is to consume Cosmic Coffee or Clang Cola.
+Stop for some Cosmic Coffee or Clang Cola on your way, or assemble your self a can of refreshing Sparkling Water!
 
-Sorry, no healthier options exists in the universe right now!
+
+This Mod is Open Source. Feel free to report Issues, give Suggestions or Contribute to the mod on Github:
+
+https://github.com/vaidasmaciulis/drinkwater
