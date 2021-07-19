@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SparklingWater</SubtypeId>
+      </Id>
+      <DisplayName>Sparkling Water</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\SparklingWat.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+        <Item Amount="0.1" TypeId="Ingot" SubtypeId="Iron" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="ConsumableItem" SubtypeId="SparklingWater" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint> 
+  </Blueprints>
+</Definitions>
