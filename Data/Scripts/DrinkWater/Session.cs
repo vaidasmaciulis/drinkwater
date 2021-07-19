@@ -2,6 +2,7 @@
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
+using System.Linq;
 using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
@@ -31,7 +32,13 @@ namespace DrinkWater
                 inventory.ContentsRemoved += (item, point) =>
                 {
                     string objectIdString = item.Content.GetObjectId().ToString();
-                    if (objectIdString.Contains("ClangCola") || objectIdString.Contains("CosmicCoffee"))
+                    string[] drinks = { 
+                        "ClangCola", 
+                        "CosmicCoffee", 
+                        "SparklingWater" 
+                    };
+
+                    if (drinks.Any(drink => objectIdString.Contains(drink))) 
                     {
                         MyEntityStat water = GetPlayerWaterStat(player);
 
