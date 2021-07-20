@@ -1,6 +1,10 @@
 # drinkwater
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 7/20/2021:
+
+- Moved Water stat closer to the other stats.
+
 UPDATE 7/19/2021:
 
 - Fresh and Cold Sparkling Water is now available at the nearest assembler!
