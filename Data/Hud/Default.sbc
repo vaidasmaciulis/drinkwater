@@ -389,11 +389,11 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>0</X>
-							<Y>-168</Y>
+							<Y>-197</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>450</X>
-							<Y>165</Y>
+							<Y>194</Y>
 						</SizePx>
 						<Category>Background</Category>
 
@@ -837,7 +837,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>20</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -852,7 +852,7 @@
 						<StatId>player_helmet</StatId>
 						<OffsetPx>
 							<X>20</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -902,7 +902,7 @@
 						<StatId>player_helmet</StatId>
 						<OffsetPx>
 							<X>20</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -948,7 +948,7 @@
 
 						<OffsetPx>
 							<X>44</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -986,7 +986,7 @@
 
 						<OffsetPx>
 							<X>-283</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1012,7 +1012,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>82</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1027,7 +1027,7 @@
 
 						<OffsetPx>
 							<X>82</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1086,7 +1086,7 @@
 
 						<OffsetPx>
 							<X>82</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1158,7 +1158,7 @@
 
 						<OffsetPx>
 							<X>105</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1194,7 +1194,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>144</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1210,7 +1210,7 @@
 
 						<OffsetPx>
 							<X>144</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1263,7 +1263,7 @@
 
 						<OffsetPx>
 							<X>144</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1309,7 +1309,7 @@
 
 						<OffsetPx>
 							<X>167</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1345,7 +1345,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>206</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1360,7 +1360,7 @@
 						<StatId>player_flashlight</StatId>
 						<OffsetPx>
 							<X>206</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1407,7 +1407,7 @@
 						<StatId>player_flashlight</StatId>
 						<OffsetPx>
 							<X>206</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1460,7 +1460,7 @@
 
 						<OffsetPx>
 							<X>229</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1498,7 +1498,7 @@
 
 						<OffsetPx>
 							<X>82</X>
-							<Y>-227</Y>
+							<Y>-256</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
@@ -1549,7 +1549,7 @@
 
 						<OffsetPx>
 							<X>68</X>
-							<Y>-254</Y>
+							<Y>-163</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1611,7 +1611,7 @@
 
 						<OffsetPx>
 							<X>231</X>
-							<Y>-260</Y>
+							<Y>-169</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1645,7 +1645,7 @@
 
 						<OffsetPx>
 							<X>40</X>
-							<Y>-255</Y>
+							<Y>-164</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>24</X>
