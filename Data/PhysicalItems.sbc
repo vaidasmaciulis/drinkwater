@@ -76,5 +76,30 @@
             <MaximumOfferAmount>10000</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>LaysChips</SubtypeId>
+            </Id>
+            <DisplayName>Lays Chips</DisplayName>
+            <Description>Lays Chips</Description>
+            <Icon>Textures\GUI\Icons\Items\LaysChips.dds</Icon>
+            <Size>
+                <X>0.14</X>
+                <Y>0.43</Y>
+                <Z>0.14</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>1</Volume>
+            <Model>Models\Items\LaysChips.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Water" Value ="0.10" Time="3"/>
+            </Stats>
+            <MinimalPricePerUnit>100</MinimalPricePerUnit>
+            <MinimumOfferAmount>1000</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
     </PhysicalItems>
 </Definitions>
