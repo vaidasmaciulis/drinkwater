@@ -3,6 +3,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
 UPDATE 7/25/2021:
 
+- Tired of just drinking? Add some food to your diet! Food stat and some tasty chips are added.
 - Fixed game crash on respawn.
 
 UPDATE 7/20/2021:
