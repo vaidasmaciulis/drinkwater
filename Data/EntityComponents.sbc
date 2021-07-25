@@ -9,6 +9,10 @@
             <Stats>
                 <Stat>
                     <TypeId>MyObjectBuilder_EntityStat</TypeId>
+                    <SubtypeId>SpaceCharacterHealth</SubtypeId>
+                </Stat>
+                <Stat>
+                    <TypeId>MyObjectBuilder_EntityStat</TypeId>
                     <SubtypeId>Water</SubtypeId>
                 </Stat>
             </Stats>

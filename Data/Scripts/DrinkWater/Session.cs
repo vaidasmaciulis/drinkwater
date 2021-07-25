@@ -20,42 +20,6 @@ namespace DrinkWater
         private static List<IMyPlayer> players = new List<IMyPlayer>();
         private static int skippedTicks = 0;
 
-        public override void BeforeStart()
-        {
-            base.BeforeStart();
-
-            players.Clear();
-            MyAPIGateway.Players.GetPlayers(players);
-            foreach (IMyPlayer player in players)
-            {
-                MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
-                inventory.ContentsRemoved += (item, point) =>
-                {
-                    string objectIdString = item.Content.GetObjectId().ToString();
-                    string[] drinks = { 
-                        "ClangCola", 
-                        "CosmicCoffee", 
-                        "SparklingWater" 
-                    };
-
-                    if (drinks.Any(drink => objectIdString.Contains(drink))) 
-                    {
-                        MyEntityStat water = GetPlayerWaterStat(player);
-
-                        //Make sure it was not just removing drinks from inventory
-                        if (water.HasAnyEffect())
-                        {
-                            if (player.Character.EnabledHelmet)
-                            {
-                                player.Character.SwitchHelmet();
-                                MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
-                            }
-                        }
-                    }
-                };
-            }
-        }
-
         public override void UpdateAfterSimulation()
         {
             if (skippedTicks++ < TICKS_TO_SKIP)
@@ -69,7 +33,30 @@ namespace DrinkWater
 
             foreach (IMyPlayer player in players)
             {
+                MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
                 MyEntityStat water = GetPlayerWaterStat(player);
+                inventory.ContentsRemoved += (item, point) =>
+                {
+                    string objectIdString = item.Content.GetObjectId().ToString();
+                    string[] drinks = {
+                        "ClangCola",
+                        "CosmicCoffee",
+                        "SparklingWater"
+                    };
+
+                    if (drinks.Any(drink => objectIdString.Contains(drink)))
+                    {
+                        //Make sure it was not just removing drinks from inventory
+                        if (water.HasAnyEffect())
+                        {
+                            if (player.Character.EnabledHelmet)
+                            {
+                                player.Character.SwitchHelmet();
+                                MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
+                            }
+                        }
+                    }
+                };
 
                 if (water.Value > 0)
                 {
