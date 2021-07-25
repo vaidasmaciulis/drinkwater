@@ -15,6 +15,10 @@
                     <TypeId>MyObjectBuilder_EntityStat</TypeId>
                     <SubtypeId>Water</SubtypeId>
                 </Stat>
+                <Stat>
+                    <TypeId>MyObjectBuilder_EntityStat</TypeId>
+                    <SubtypeId>Food</SubtypeId>
+                </Stat>
             </Stats>
             <Scripts>
                 <Script>SpaceStatEffect</Script>

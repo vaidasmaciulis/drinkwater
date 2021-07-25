@@ -16,7 +16,9 @@ namespace DrinkWater
         private const int TICKS_TO_SKIP = 300;
         private const float WATER_USAGE = 0.1f;
         private const float WATER_DAMAGE = 0.5f;
-
+        private const float FOOD_USAGE = 0.03f;
+        private const float FOOD_DAMAGE = 0.3f;
+        
         private static List<IMyPlayer> players = new List<IMyPlayer>();
         private static int skippedTicks = 0;
 
@@ -33,8 +35,12 @@ namespace DrinkWater
 
             foreach (IMyPlayer player in players)
             {
+                MyEntityStatComponent statComp;
+                player.Character.Components.TryGet(out statComp);
+
                 MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
-                MyEntityStat water = GetPlayerWaterStat(player);
+
+                MyEntityStat water = GetPlayerStat(statComp, "Water");
                 inventory.ContentsRemoved += (item, point) =>
                 {
                     string objectIdString = item.Content.GetObjectId().ToString();
@@ -58,6 +64,28 @@ namespace DrinkWater
                     }
                 };
 
+                MyEntityStat food = GetPlayerStat(statComp, "Food");
+                inventory.ContentsRemoved += (item, point) =>
+                {
+                    string objectIdString = item.Content.GetObjectId().ToString();
+                    string[] edibles = {
+                        "LaysChips",
+                    };
+
+                    if (edibles.Any(edible => objectIdString.Contains(edible)))
+                    {
+                        //Make sure it was not just removing food from inventory
+                        if (food.HasAnyEffect())
+                        {
+                            if (player.Character.EnabledHelmet)
+                            {
+                                player.Character.SwitchHelmet();
+                                MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Eat!");
+                            }
+                        }
+                    }
+                };
+
                 if (water.Value > 0)
                 {
                     water.Decrease(WATER_USAGE, null);
@@ -67,17 +95,24 @@ namespace DrinkWater
                 {
                     player.Character.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
                 }
+
+                if (food.Value > 0)
+                {
+                    food.Decrease(FOOD_USAGE, null);
+                }
+
+                if (food.Value <= 0)
+                {
+                    player.Character.DoDamage(FOOD_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                }
             }
         }
 
-        private MyEntityStat GetPlayerWaterStat(IMyPlayer player)
+        private MyEntityStat GetPlayerStat(MyEntityStatComponent statComp, string statName)
         {
-            MyEntityStatComponent statComp;
-            player.Character.Components.TryGet(out statComp);
-
-            MyEntityStat water;
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
-            return water;
+            MyEntityStat stat;
+            statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out stat);
+            return stat;
         }
     }
 }
