@@ -1,6 +1,10 @@
 # drinkwater
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 7/25/2021:
+
+- Fixed game crash on respawn.
+
 UPDATE 7/20/2021:
 
 - Moved Water stat closer to the other stats.
