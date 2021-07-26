@@ -1,8 +1,6 @@
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
-using System.Collections.Generic;
-using VRage.Game.ModAPI;
 using VRage.ModAPI;
 using VRage.Utils;
 
@@ -48,14 +46,9 @@ namespace DrinkWater
 
         public void Update()
         {
-            List<IMyPlayer> players = new List<IMyPlayer>();
-            MyAPIGateway.Players.GetPlayers(players);
-            IMyPlayer player = players[0];
+            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
 
-            MyEntityStatComponent statComp;
-            player.Character.Components.TryGet(out statComp);
-
-            if (player == null || statComp == null)
+            if (statComp == null)
             {
                 return;
             }
