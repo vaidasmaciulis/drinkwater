@@ -18,7 +18,7 @@ namespace DrinkWater
         private const float WATER_DAMAGE = 0.5f;
         private const float FOOD_USAGE = 0.03f;
         private const float FOOD_DAMAGE = 0.3f;
-        
+
         private static List<IMyPlayer> players = new List<IMyPlayer>();
         private static int skippedTicks = 0;
 
@@ -35,19 +35,28 @@ namespace DrinkWater
 
             foreach (IMyPlayer player in players)
             {
-                MyEntityStatComponent statComp;
-                player.Character.Components.TryGet(out statComp);
-
-                MyInventoryBase inventory = (MyInventoryBase)player.Character.GetInventory();
+                MyEntityStatComponent statComp = player.Character?.Components.Get<MyEntityStatComponent>();
+                MyInventoryBase inventory = (MyInventoryBase)player.Character?.GetInventory();
+                if (statComp == null || inventory == null)
+                {
+                    return;
+                }
 
                 MyEntityStat water = GetPlayerStat(statComp, "Water");
+                MyEntityStat food = GetPlayerStat(statComp, "Food");
+
                 inventory.ContentsRemoved += (item, point) =>
                 {
                     string objectIdString = item.Content.GetObjectId().ToString();
+
                     string[] drinks = {
                         "ClangCola",
                         "CosmicCoffee",
                         "SparklingWater"
+                    };
+
+                    string[] edibles = {
+                        "LaysChips",
                     };
 
                     if (drinks.Any(drink => objectIdString.Contains(drink)))
@@ -62,15 +71,6 @@ namespace DrinkWater
                             }
                         }
                     }
-                };
-
-                MyEntityStat food = GetPlayerStat(statComp, "Food");
-                inventory.ContentsRemoved += (item, point) =>
-                {
-                    string objectIdString = item.Content.GetObjectId().ToString();
-                    string[] edibles = {
-                        "LaysChips",
-                    };
 
                     if (edibles.Any(edible => objectIdString.Contains(edible)))
                     {
@@ -106,6 +106,7 @@ namespace DrinkWater
                     player.Character.DoDamage(FOOD_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
                 }
             }
+
         }
 
         private MyEntityStat GetPlayerStat(MyEntityStatComponent statComp, string statName)
