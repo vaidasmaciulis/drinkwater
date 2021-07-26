@@ -1,6 +1,10 @@
 # drinkwater
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 7/27/2021:
+
+- Drink Water should work in multiplayer now (Thanks Imperator for some tips!)
+
 UPDATE 7/25/2021:
 
 - Tired of just drinking? Add some food to your diet! Food stat and some tasty chips are added.
