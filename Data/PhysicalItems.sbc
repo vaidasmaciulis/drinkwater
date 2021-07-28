@@ -20,6 +20,7 @@
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
                 <Stat Name="Water" Value ="0.10" Time="3"/>
+                <Stat Name="Food" Value ="0.01" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
             <MinimumOfferAmount>1000</MinimumOfferAmount>
