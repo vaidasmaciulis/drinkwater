@@ -49,19 +49,9 @@ namespace DrinkWater
                 {
                     string objectIdString = item.Content.GetObjectId().ToString();
 
-                    string[] drinks = {
-                        "ClangCola",
-                        "CosmicCoffee",
-                        "SparklingWater"
-                    };
-
-                    string[] edibles = {
-                        "LaysChips",
-                    };
-
-                    if (drinks.Any(drink => objectIdString.Contains(drink)))
+                    if (objectIdString.Contains("ConsumableItem"))
                     {
-                        //Make sure it was not just removing drinks from inventory
+                        //Make sure it was not just any consumable removed from inventory
                         if (water.HasAnyEffect())
                         {
                             if (player.Character.EnabledHelmet)
@@ -70,11 +60,6 @@ namespace DrinkWater
                                 MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
                             }
                         }
-                    }
-
-                    if (edibles.Any(edible => objectIdString.Contains(edible)))
-                    {
-                        //Make sure it was not just removing food from inventory
                         if (food.HasAnyEffect())
                         {
                             if (player.Character.EnabledHelmet)
