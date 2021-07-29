@@ -6,6 +6,7 @@ UPDATE 7/29/2021:
 - ClangCola now provides you with some food due to all that sugar
 - Chips and drinks rations will appear in Drop Pods
 - Local dispenser does not serve food/drinks any more
+- No changes in this mod i now required if you want to integrate with it. Just create ConsumableItem that restores "Food" or "Water" stats
 
 UPDATE 7/27/2021:
 
