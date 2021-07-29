@@ -2,7 +2,6 @@
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
-using System.Linq;
 using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
@@ -74,9 +73,8 @@ namespace DrinkWater
                 if (water.Value > 0)
                 {
                     water.Decrease(WATER_USAGE, null);
-                }
-
-                if (water.Value <= 0)
+                } 
+                else
                 {
                     player.Character.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
                 }
@@ -84,9 +82,8 @@ namespace DrinkWater
                 if (food.Value > 0)
                 {
                     food.Decrease(FOOD_USAGE, null);
-                }
-
-                if (food.Value <= 0)
+                } 
+                else
                 {
                     player.Character.DoDamage(FOOD_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
                 }
