@@ -33,42 +33,6 @@
       </MountPoints>
       <RequiredPowerInput>0.002</RequiredPowerInput>
         <DefaultItems>
-            <MyObjectBuilder_StoreItem>
-                <Id>1136189434942549542</Id>
-                <Item Type="MyObjectBuilder_ConsumableItem" Subtype="ClangCola" />
-                <ItemType>PhysicalItem</ItemType>
-                <Amount>1</Amount>
-                <RemovedAmount>0</RemovedAmount>
-                <PricePerUnit>100</PricePerUnit>
-                <StoreItemType>Offer</StoreItemType>
-                <UpdateCount>0</UpdateCount>
-                <PrefabTotalPcu>0</PrefabTotalPcu>
-                <PricePerUnitDiscount>0</PricePerUnitDiscount>
-            </MyObjectBuilder_StoreItem>
-            <MyObjectBuilder_StoreItem>
-                <Id>1082521839310786643</Id>
-                <Item Type="MyObjectBuilder_ConsumableItem" Subtype="CosmicCoffee" />
-                <ItemType>PhysicalItem</ItemType>
-                <Amount>1</Amount>
-                <RemovedAmount>0</RemovedAmount>
-                <PricePerUnit>100</PricePerUnit>
-                <StoreItemType>Offer</StoreItemType>
-                <UpdateCount>0</UpdateCount>
-                <PrefabTotalPcu>0</PrefabTotalPcu>
-                <PricePerUnitDiscount>0</PricePerUnitDiscount>
-            </MyObjectBuilder_StoreItem>
-            <MyObjectBuilder_StoreItem>
-                <Id>1082521839310786644</Id>
-                <Item Type="MyObjectBuilder_ConsumableItem" Subtype="LaysChips" />
-                <ItemType>PhysicalItem</ItemType>
-                <Amount>1</Amount>
-                <RemovedAmount>0</RemovedAmount>
-                <PricePerUnit>500</PricePerUnit>
-                <StoreItemType>Offer</StoreItemType>
-                <UpdateCount>0</UpdateCount>
-                <PrefabTotalPcu>0</PrefabTotalPcu>
-                <PricePerUnitDiscount>0</PricePerUnitDiscount>
-            </MyObjectBuilder_StoreItem>
         </DefaultItems>
         <ThrowOutDummy>FoodDispenserSpawn</ThrowOutDummy>
         <BlockPairName>FoodDispenser</BlockPairName>
