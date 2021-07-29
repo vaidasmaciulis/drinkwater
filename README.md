@@ -1,6 +1,12 @@
 # drinkwater
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 7/29/2021:
+
+- ClangCola now provides you with some food due to all that sugar
+- Chips and drinks rations will appear in Drop Pods
+- Local dispenser does not serve food/drinks any more
+
 UPDATE 7/27/2021:
 
 - Drink Water should work in multiplayer now (Thanks Imperator for some tips!)
