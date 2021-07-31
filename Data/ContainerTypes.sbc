@@ -22,9 +22,17 @@
                         <SubtypeId>LaysChips</SubtypeId>
                     </Id>
                 </Item>
-                
+                                
                 <Item AmountMin="5" AmountMax="10">
                     <Frequency>0.3</Frequency>
+                    <Id>
+                        <TypeId>ConsumableItem</TypeId>
+                        <SubtypeId>InterBeer</SubtypeId>
+                    </Id>
+                </Item>
+
+                <Item AmountMin="5" AmountMax="10">
+                    <Frequency>0.2</Frequency>
                     <Id>
                         <TypeId>ConsumableItem</TypeId>
                         <SubtypeId>ClangCola</SubtypeId>

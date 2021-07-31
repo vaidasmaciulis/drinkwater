@@ -14,8 +14,8 @@
                 <Y>0.43</Y>
                 <Z>0.14</Z>
             </Size>
-            <Mass>1</Mass>
-            <Volume>1</Volume>
+            <Mass>0.5</Mass>
+            <Volume>0.5</Volume>
             <Model>Models\Items\ClangCola.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
@@ -40,8 +40,8 @@
                 <Y>0.43</Y>
                 <Z>0.14</Z>
             </Size>
-            <Mass>1</Mass>
-            <Volume>1</Volume>
+            <Mass>0.5</Mass>
+            <Volume>0.5</Volume>
             <Model>Models\Items\CosmicCoffee.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
@@ -65,9 +65,34 @@
                 <Y>0.43</Y>
                 <Z>0.14</Z>
             </Size>
-            <Mass>1</Mass>
-            <Volume>1</Volume>
+            <Mass>0.5</Mass>
+            <Volume>0.5</Volume>
             <Model>Models\Items\SparklingWat.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Water" Value ="0.10" Time="3"/>
+            </Stats>
+            <MinimalPricePerUnit>100</MinimalPricePerUnit>
+            <MinimumOfferAmount>1000</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>InterBeer</SubtypeId>
+            </Id>
+            <DisplayName>Inter-Stella Beer</DisplayName>
+            <Description>It's always 5pm somewhere in space.</Description>
+            <Icon>Textures\GUI\Icons\Items\InterBeer.dds</Icon>
+            <Size>
+                <X>0.14</X>
+                <Y>0.43</Y>
+                <Z>0.14</Z>
+            </Size>
+            <Mass>0.5</Mass>
+            <Volume>0.5</Volume>
+            <Model>Models\Items\InterBeer.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
                 <Stat Name="Water" Value ="0.10" Time="3"/>
@@ -90,7 +115,7 @@
                 <Y>0.43</Y>
                 <Z>0.14</Z>
             </Size>
-            <Mass>1</Mass>
+            <Mass>0.3</Mass>
             <Volume>1</Volume>
             <Model>Models\Items\LaysChips.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
