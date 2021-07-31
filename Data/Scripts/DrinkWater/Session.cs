@@ -20,7 +20,7 @@ namespace DrinkWater
         private const float FOOD_DAMAGE = 0.3f;
         private const float SLEEP_USAGE = 0.02f;
         private const float SLEEP_DAMAGE = 0.3f;
-        private const float SLEEP_GAIN_SITTING = 2f;
+        private const float SLEEP_GAIN_SITTING = 5f;
         private const float SLEEP_GAIN_SLEEPING = 100f;
 
         private static List<IMyPlayer> players = new List<IMyPlayer>();
