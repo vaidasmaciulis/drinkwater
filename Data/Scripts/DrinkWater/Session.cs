@@ -2,6 +2,7 @@
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
+using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
@@ -17,6 +18,10 @@ namespace DrinkWater
         private const float WATER_DAMAGE = 0.5f;
         private const float FOOD_USAGE = 0.03f;
         private const float FOOD_DAMAGE = 0.3f;
+        private const float SLEEP_USAGE = 1.02f;
+        private const float SLEEP_DAMAGE = 0.3f;
+        private const float SLEEP_GAIN_SITTING = 2f;
+        private const float SLEEP_GAIN_SLEEPING = 100f;
 
         private static List<IMyPlayer> players = new List<IMyPlayer>();
         private static int skippedTicks = 0;
@@ -43,6 +48,7 @@ namespace DrinkWater
 
                 MyEntityStat water = GetPlayerStat(statComp, "Water");
                 MyEntityStat food = GetPlayerStat(statComp, "Food");
+                MyEntityStat sleep = GetPlayerStat(statComp, "Sleep");
 
                 inventory.ContentsRemoved += (item, point) =>
                 {
@@ -86,6 +92,20 @@ namespace DrinkWater
                 else
                 {
                     player.Character.DoDamage(FOOD_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                }
+
+                if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sitting)
+				{
+                    float sleepGain = player.Controller.ControlledEntity.ToString().StartsWith("MyCryoChamber") ? SLEEP_GAIN_SLEEPING : SLEEP_GAIN_SITTING;
+                    sleep.Increase(sleepGain, null);
+				}
+                else if (sleep.Value > 0)
+                {
+                    sleep.Decrease(SLEEP_USAGE, null);
+                }
+                else
+                {
+                    player.Character.DoDamage(SLEEP_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
                 }
             }
 
