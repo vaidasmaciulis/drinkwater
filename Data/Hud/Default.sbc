@@ -1540,6 +1540,118 @@
 
 					<!-- PLAYER STAT PROGRESS BARS -->
 <!-- 
+            Sleep
+            ...............................................................................
+          -->
+					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
+						<StatId>player_sleep</StatId>
+
+						<OffsetPx>
+							<X>68</X>
+							<Y>-202</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>9</Y>
+						</SizePx>
+
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_sleep</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+							<ProgressColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+							<MinAlpha>0.6</MinAlpha>
+							<MaxAlpha>1</MaxAlpha>								
+						</Blink>	
+
+						<SimpleStyle>
+							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTextureOffsetPx>
+								<X>0</X>
+								<Y>0</Y>
+							</ProgressTextureOffsetPx>
+							<ProgressColorMask>
+								<X>0.734375</X>
+								<Y>0.9137254901960784</Y>
+								<Z>0.9647058823529412</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>0.3137</X>
+								<Y>0.3607</Y>
+								<Z>0.4039</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</SimpleStyle>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>player_sleep</StatId>
+
+						<OffsetPx>
+							<X>231</X>
+							<Y>-208</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>16</X>
+							<Y>16</Y>
+						</SizePx>
+
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_sleep</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+						</Blink>
+						<Percentage>true</Percentage>
+						<Precision>0</Precision>
+						<Text>{STAT}</Text>
+						<Font>White</Font>
+						<Scale>0.7</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<OffsetPx>
+							<X>64</X>
+							<Y>-199</Y>
+						</OffsetPx>
+
+						<Text>Sleep</Text>
+						<Font>Blue</Font>
+						<Scale>0.5</Scale>
+						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+<!-- 
             Food
             ...............................................................................
           -->
