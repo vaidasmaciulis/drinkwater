@@ -15,23 +15,31 @@
                     </Id>
                 </Item>
 
-                <Item AmountMin="5" AmountMax="10">
-                    <Frequency>0.5</Frequency>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>0.3</Frequency>
                     <Id>
                         <TypeId>ConsumableItem</TypeId>
                         <SubtypeId>LaysChips</SubtypeId>
                     </Id>
                 </Item>
-                                
-                <Item AmountMin="5" AmountMax="10">
+                       
+                <Item AmountMin="1" AmountMax="10">
                     <Frequency>0.3</Frequency>
+                    <Id>
+                        <TypeId>ConsumableItem</TypeId>
+                        <SubtypeId>PrlnglesChips</SubtypeId>
+                    </Id>
+                </Item>
+
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>0.1</Frequency>
                     <Id>
                         <TypeId>ConsumableItem</TypeId>
                         <SubtypeId>InterBeer</SubtypeId>
                     </Id>
                 </Item>
 
-                <Item AmountMin="5" AmountMax="10">
+                <Item AmountMin="1" AmountMax="10">
                     <Frequency>0.2</Frequency>
                     <Id>
                         <TypeId>ConsumableItem</TypeId>
@@ -39,7 +47,7 @@
                     </Id>
                 </Item>
                 
-                <Item AmountMin="5" AmountMax="10">
+                <Item AmountMin="1" AmountMax="10">
                     <Frequency>0.1</Frequency>
                     <Id>
                         <TypeId>ConsumableItem</TypeId>

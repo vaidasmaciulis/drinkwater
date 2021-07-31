@@ -120,7 +120,6 @@
             <Mass>0.3</Mass>
             <Volume>1</Volume>
             <Model>Models\Items\LaysChips.mwm</Model>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
                 <Stat Name="Food" Value ="0.10" Time="5"/>
             </Stats>
@@ -145,7 +144,6 @@
             <Mass>0.3</Mass>
             <Volume>1</Volume>
             <Model>Models\Items\PrlnglesChips.mwm</Model>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
                 <Stat Name="Food" Value ="0.10" Time="5"/>
             </Stats>
