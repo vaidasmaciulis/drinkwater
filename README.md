@@ -1,5 +1,12 @@
-# drinkwater
+# Eat. Drink. Sleep. Repeat!
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
+
+UPDATE 7/31/2021:
+
+- Sleep mechanics added. You can get some sleep by sitting (slowly), laying in the bed (fast) or just drinking Coffee
+- Inter-Stella Beer added - crack a cold one!
+- Prlngles chips added. Must keep a balanced diet.
+- Mod renamed from "Drink Water!" to "Eat. Drink. Sleep. Repeat!"
 
 UPDATE 7/29/2021:
 
