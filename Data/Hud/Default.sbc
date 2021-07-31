@@ -1012,7 +1012,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>82</X>
-							<Y>-250</Y>
+							<Y>-270</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>60</X>
