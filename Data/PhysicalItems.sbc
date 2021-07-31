@@ -96,7 +96,8 @@
             <Model>Models\Items\InterBeer.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
-                <Stat Name="Water" Value ="0.10" Time="3"/>
+                <Stat Name="Water" Value ="0.15" Time="3"/>
+                <Stat Name="Sleep" Value ="-0.02" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
             <MinimumOfferAmount>1000</MinimumOfferAmount>
@@ -119,6 +120,31 @@
             <Mass>0.3</Mass>
             <Volume>1</Volume>
             <Model>Models\Items\LaysChips.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Food" Value ="0.10" Time="5"/>
+            </Stats>
+            <MinimalPricePerUnit>500</MinimalPricePerUnit>
+            <MinimumOfferAmount>1000</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>PrlnglesChips</SubtypeId>
+            </Id>
+            <DisplayName>Prlngles Chips</DisplayName>
+            <Description>Prlngles Chips</Description>
+            <Icon>Textures\GUI\Icons\Items\PrlnglesChips.dds</Icon>
+            <Size>
+                <X>0.14</X>
+                <Y>0.43</Y>
+                <Z>0.14</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>1</Volume>
+            <Model>Models\Items\PrlnglesChips.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
                 <Stat Name="Food" Value ="0.10" Time="5"/>
