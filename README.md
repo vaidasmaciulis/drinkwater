@@ -5,6 +5,8 @@ UPDATE 8/1/2021:
 
 - Chips brands have been switched to more honest ones.
 - Food and drinks now can be bought in economy stations.
+- Damage from running out of water/food/sleep increased.
+- Food/water does not decrease while in cryo chamber or bed.
 
 UPDATE 7/31/2021:
 
