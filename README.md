@@ -1,6 +1,10 @@
 # Eat. Drink. Sleep. Repeat!
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 8/1/2021:
+
+- Chips brands have been switched to more honest ones.
+
 UPDATE 7/31/2021:
 
 - Sleep mechanics added. You can get some sleep by sitting (slowly), laying in the bed (fast) or just drinking Coffee

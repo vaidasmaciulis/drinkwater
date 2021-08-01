@@ -109,8 +109,8 @@
                 <TypeId>ConsumableItem</TypeId>
                 <SubtypeId>LaysChips</SubtypeId>
             </Id>
-            <DisplayName>Lays Chips</DisplayName>
-            <Description>Lays Chips</Description>
+            <DisplayName>Lies Chips</DisplayName>
+            <Description>When you expect food, but get air instead, but it's space so that's actaully good.</Description>
             <Icon>Textures\GUI\Icons\Items\LaysChips.dds</Icon>
             <Size>
                 <X>0.14</X>
@@ -133,8 +133,8 @@
                 <TypeId>ConsumableItem</TypeId>
                 <SubtypeId>PrlnglesChips</SubtypeId>
             </Id>
-            <DisplayName>Prlngles Chips</DisplayName>
-            <Description>Prlngles Chips</Description>
+            <DisplayName>Single Chips</DisplayName>
+            <Description>Feeling all alone in outer space? Eat some chips.</Description>
             <Icon>Textures\GUI\Icons\Items\PrlnglesChips.dds</Icon>
             <Size>
                 <X>0.14</X>
