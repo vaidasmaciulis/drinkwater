@@ -4,6 +4,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 UPDATE 8/1/2021:
 
 - Chips brands have been switched to more honest ones.
+- Food and drinks now can be bought in economy stations.
 
 UPDATE 7/31/2021:
 

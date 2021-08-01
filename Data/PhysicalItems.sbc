@@ -23,8 +23,8 @@
                 <Stat Name="Food" Value ="0.01" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
-            <MinimumOfferAmount>1000</MinimumOfferAmount>
-            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
         <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
@@ -49,8 +49,8 @@
                 <Stat Name="Sleep" Value ="0.10" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
-            <MinimumOfferAmount>1000</MinimumOfferAmount>
-            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
         <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
@@ -74,8 +74,8 @@
                 <Stat Name="Water" Value ="0.10" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
-            <MinimumOfferAmount>1000</MinimumOfferAmount>
-            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
         <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
@@ -100,8 +100,8 @@
                 <Stat Name="Sleep" Value ="-0.02" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
-            <MinimumOfferAmount>1000</MinimumOfferAmount>
-            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
         <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
@@ -124,8 +124,8 @@
                 <Stat Name="Food" Value ="0.10" Time="5"/>
             </Stats>
             <MinimalPricePerUnit>500</MinimalPricePerUnit>
-            <MinimumOfferAmount>1000</MinimumOfferAmount>
-            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
         <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
@@ -148,8 +148,8 @@
                 <Stat Name="Food" Value ="0.10" Time="5"/>
             </Stats>
             <MinimalPricePerUnit>500</MinimalPricePerUnit>
-            <MinimumOfferAmount>1000</MinimumOfferAmount>
-            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </PhysicalItem>
     </PhysicalItems>
