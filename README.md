@@ -1,6 +1,10 @@
 # Eat. Drink. Sleep. Repeat!
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 8/4/2021:
+
+- Added food and drinks to Consumables blocks menu
+
 UPDATE 8/1/2021:
 
 - Chips brands have been switched to more honest ones.
