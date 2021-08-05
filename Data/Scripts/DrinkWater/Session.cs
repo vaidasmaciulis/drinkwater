@@ -39,11 +39,15 @@ namespace DrinkWater
 
             foreach (IMyPlayer player in players)
             {
-                MyEntityStatComponent statComp = player.Character?.Components.Get<MyEntityStatComponent>();
+                if (player.IsBot == true)
+				{
+                    continue;
+				}
+                MyEntityStatComponent statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
                 MyInventoryBase inventory = (MyInventoryBase)player.Character?.GetInventory();
                 if (statComp == null || inventory == null)
                 {
-                    return;
+                    continue;
                 }
 
                 MyEntityStat water = GetPlayerStat(statComp, "Water");
@@ -78,17 +82,17 @@ namespace DrinkWater
 
                 if (water.Value <= 0)
                 {
-                    player.Character.DoDamage(WATER_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                    player.Character.DoDamage(WATER_DAMAGE, MyDamageType.Unknown, true);
                 }
 
                 if (food.Value <= 0)
                 {
-                    player.Character.DoDamage(FOOD_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                    player.Character.DoDamage(FOOD_DAMAGE, MyDamageType.Unknown, true);
                 }
 
                 if (sleep.Value <= 0)
                 {
-                    player.Character.DoDamage(SLEEP_DAMAGE, MyStringHash.GetOrCompute("Unknown"), true);
+                    player.Character.DoDamage(SLEEP_DAMAGE, MyDamageType.Unknown, true);
                 }
 
                 bool inCryoOrBed = false;
@@ -109,7 +113,6 @@ namespace DrinkWater
                     food.Decrease(FOOD_USAGE, null);
                     water.Decrease(WATER_USAGE, null);
                 }
-
             }
 
         }

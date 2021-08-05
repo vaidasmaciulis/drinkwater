@@ -1,6 +1,10 @@
 # Eat. Drink. Sleep. Repeat!
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 8/5/2021:
+
+- Fixed crash with Wolves, Spiders and Female character.
+
 UPDATE 8/4/2021:
 
 - Added food and drinks to Consumables blocks menu
