@@ -1,6 +1,11 @@
 # Eat. Drink. Sleep. Repeat!
 https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
 
+UPDATE 8/9/2021:
+
+- Fixed crash when controlling Turret.
+- Drinks stats values tweaked.
+
 UPDATE 8/7/2021:
 
 - Sitting inside Ship-controlling seats, does not regain sleep anymore. Shouldn't sleep while driving.

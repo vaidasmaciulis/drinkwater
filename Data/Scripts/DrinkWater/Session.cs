@@ -1,4 +1,5 @@
-﻿using Sandbox.Game.Components;
+﻿using Sandbox.Game;
+using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace DrinkWater
 		private const float FOOD_DAMAGE = 3f;
 		private const float SLEEP_USAGE = 0.02f;
 		private const float SLEEP_DAMAGE = 2f;
-		private const float SLEEP_GAIN_SITTING = 5f;
+		private const float SLEEP_GAIN_SITTING = 3f;
 		private const float SLEEP_GAIN_SLEEPING = 100f;
 
 		private static List<IMyPlayer> players = new List<IMyPlayer>();
@@ -97,9 +98,11 @@ namespace DrinkWater
 
 				bool inCryoOrBed = false;
 
-				if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sitting && 
+				if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sitting &&
+					(player.Controller.ControlledEntity as IMyShipController) != null &&
 					!(player.Controller.ControlledEntity as IMyShipController).CanControlShip)
 				{
+					//Sitting, but not working
 					inCryoOrBed = player.Controller.ControlledEntity.ToString().StartsWith("MyCryoChamber");
 					float sleepGain = inCryoOrBed ? SLEEP_GAIN_SLEEPING : SLEEP_GAIN_SITTING;
 					sleep.Increase(sleepGain, null);

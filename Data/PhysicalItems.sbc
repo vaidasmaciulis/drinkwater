@@ -19,8 +19,7 @@
             <Model>Models\Items\ClangCola.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
-                <Stat Name="Water" Value ="0.10" Time="3"/>
-                <Stat Name="Food" Value ="0.01" Time="3"/>
+                <Stat Name="Water" Value ="0.15" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
@@ -45,8 +44,8 @@
             <Model>Models\Items\CosmicCoffee.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
-                <Stat Name="Water" Value ="0.10" Time="3"/>
-                <Stat Name="Sleep" Value ="0.10" Time="3"/>
+                <Stat Name="Water" Value ="0.05" Time="3"/>
+                <Stat Name="Sleep" Value ="0.05" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
@@ -71,7 +70,7 @@
             <Model>Models\Items\SparklingWat.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
-                <Stat Name="Water" Value ="0.10" Time="3"/>
+                <Stat Name="Water" Value ="0.15" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>100</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
@@ -96,10 +95,11 @@
             <Model>Models\Items\InterBeer.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <Stats>
-                <Stat Name="Water" Value ="0.15" Time="3"/>
-                <Stat Name="Sleep" Value ="-0.02" Time="3"/>
+                <Stat Name="Water" Value ="0.25" Time="3"/>
+                <Stat Name="Health" Value ="0.05" Time="3"/>
+                <Stat Name="Sleep" Value ="-0.05" Time="3"/>
             </Stats>
-            <MinimalPricePerUnit>100</MinimalPricePerUnit>
+            <MinimalPricePerUnit>150</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
             <MaximumOfferAmount>100</MaximumOfferAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
