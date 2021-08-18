@@ -30,3 +30,11 @@ If there are any issues integrating, please let me know.
 Eat. Drink. Sleep. Repeat! is open-source under GNU GENERAL PUBLIC LICENSE. Check LICENSE file for more details. 
 TL;DR: you can use anything from this mod in your own creations, as long as they are also open-source and link to this mod is provided in description. 
 However, it is highly recommended to integrate with this mod instead of copying the code.
+
+3D models used in the mod:
+
+Chips lays classic by ayaat600
+https://3dexport.com/free-3dmodel-chips-lays-classic-292494.htm
+
+Prlngles Snack Chips by Kutejnikov
+https://www.turbosquid.com/FullPreview/Index.cfm/ID/1090963
