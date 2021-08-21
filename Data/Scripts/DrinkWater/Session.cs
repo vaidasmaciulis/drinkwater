@@ -1,5 +1,4 @@
-﻿using Sandbox.Game;
-using Sandbox.Game.Components;
+﻿using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
@@ -67,7 +66,7 @@ namespace DrinkWater
 							if (player.Character.EnabledHelmet)
 							{
 								player.Character.SwitchHelmet();
-								MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Drink!");
+								MyAPIGateway.Utilities.ShowNotification("Helmet opened to drink!", 3000);
 							}
 						}
 						if (food.HasAnyEffect())
@@ -75,7 +74,7 @@ namespace DrinkWater
 							if (player.Character.EnabledHelmet)
 							{
 								player.Character.SwitchHelmet();
-								MyAPIGateway.Utilities.ShowMessage("DrinkWater", "Had to open helmet to Eat!");
+								MyAPIGateway.Utilities.ShowNotification("Helmet opened to eat!", 3000);
 							}
 						}
 					}
