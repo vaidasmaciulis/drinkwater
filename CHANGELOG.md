@@ -1,3 +1,9 @@
+UPDATE 8/22/2021:
+
+- Sparkling Water can be made in Survival Kit now
+- Reduced food/drinks amount in drops
+- Reduced food restored from chips
+
 UPDATE 8/9/2021:
 
 - Fixed crash when controlling Turret.
