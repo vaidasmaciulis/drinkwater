@@ -121,7 +121,7 @@
             <Volume>1</Volume>
             <Model>Models\Items\LaysChips.mwm</Model>
             <Stats>
-                <Stat Name="Food" Value ="0.10" Time="5"/>
+                <Stat Name="Food" Value ="0.10" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>500</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
@@ -145,7 +145,7 @@
             <Volume>1</Volume>
             <Model>Models\Items\PrlnglesChips.mwm</Model>
             <Stats>
-                <Stat Name="Food" Value ="0.10" Time="5"/>
+                <Stat Name="Food" Value ="0.10" Time="3"/>
             </Stats>
             <MinimalPricePerUnit>500</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
