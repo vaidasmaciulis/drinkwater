@@ -4,7 +4,6 @@ using Sandbox.ModAPI;
 using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.Components;
-using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRage.Utils;
 
@@ -16,9 +15,9 @@ namespace DrinkWater
 		private const int TICKS_TO_SKIP = 300;
 		private const float WATER_USAGE = 0.1f;
 		private const float WATER_DAMAGE = 5f;
-		private const float FOOD_USAGE = 0.03f;
+		private const float FOOD_USAGE = 0.05f;
 		private const float FOOD_DAMAGE = 3f;
-		private const float SLEEP_USAGE = 0.02f;
+		private const float SLEEP_USAGE = 0.03f;
 		private const float SLEEP_DAMAGE = 2f;
 		private const float SLEEP_GAIN_SITTING = 3f;
 		private const float SLEEP_GAIN_SLEEPING = 100f;
@@ -43,9 +42,10 @@ namespace DrinkWater
 				{
 					continue;
 				}
+
 				MyEntityStatComponent statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
-				MyInventoryBase inventory = (MyInventoryBase)player.Character?.GetInventory();
-				if (statComp == null || inventory == null)
+
+				if (statComp == null)
 				{
 					continue;
 				}
@@ -53,32 +53,6 @@ namespace DrinkWater
 				MyEntityStat water = GetPlayerStat(statComp, "Water");
 				MyEntityStat food = GetPlayerStat(statComp, "Food");
 				MyEntityStat sleep = GetPlayerStat(statComp, "Sleep");
-
-				inventory.ContentsRemoved += (item, point) =>
-				{
-					string objectIdString = item.Content.GetObjectId().ToString();
-
-					if (objectIdString.Contains("ConsumableItem"))
-					{
-						//Make sure it was not just any consumable removed from inventory
-						if (water.HasAnyEffect())
-						{
-							if (player.Character.EnabledHelmet)
-							{
-								player.Character.SwitchHelmet();
-								MyAPIGateway.Utilities.ShowNotification("Helmet opened to drink!", 3000);
-							}
-						}
-						if (food.HasAnyEffect())
-						{
-							if (player.Character.EnabledHelmet)
-							{
-								player.Character.SwitchHelmet();
-								MyAPIGateway.Utilities.ShowNotification("Helmet opened to eat!", 3000);
-							}
-						}
-					}
-				};
 
 				if (water.Value <= 0)
 				{
