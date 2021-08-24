@@ -16,14 +16,24 @@ namespace DrinkWater
 		private MyEntityStatComponent statComp;
 		private MyEntityStat water;
 		private MyEntityStat food;
+		private bool isDedicated;
 
 		public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
 		{
+			isDedicated = MyAPIGateway.Utilities.IsDedicated;
+			if (isDedicated)
+			{
+				return;
+			}
 			UpdateAfterSimulation100();
 		}
 
 		public override void UpdateAfterSimulation()
 		{
+			if (isDedicated)
+			{
+				return;
+			}
 			if (skippedTicks++ <= 100)
 			{
 				if(skippedTicks % 10 == 0)
@@ -46,12 +56,12 @@ namespace DrinkWater
 			}
 			if (character.EnabledHelmet)
 			{
-				if (water.HasAnyEffect())
+				if (water.StatRegenLeft > 0)
 				{
 					character.SwitchHelmet();
 					MyAPIGateway.Utilities.ShowNotification("Helmet opened to drink!", 3000);
 				}
-				else if (food.HasAnyEffect())
+				else if (food.StatRegenLeft > 0)
 				{
 					character.SwitchHelmet();
 					MyAPIGateway.Utilities.ShowNotification("Helmet opened to eat!", 3000);
