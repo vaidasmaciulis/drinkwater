@@ -1,3 +1,8 @@
+UPDATE 8/25/2021:
+
+- Helmet will stay open for entire food or drink consumption time
+- Notifications changed from chat to hud
+
 UPDATE 8/22/2021:
 
 - Sparkling Water can be made in Survival Kit now
