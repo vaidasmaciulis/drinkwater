@@ -19,11 +19,11 @@ namespace DrinkWater
 		private MyEntityStat sleep;
 		private bool isDedicated;
 		private const float WATER_USAGE = 0.03f;
-		private const float WATER_DAMAGE = 0.015f;
 		private const float FOOD_USAGE = 0.015f;
-		private const float FOOD_DAMAGE = 1f;
 		private const float SLEEP_USAGE = 0.01f;
-		private const float SLEEP_DAMAGE = 0.75f;
+		private const float WATER_DAMAGE = 3f;
+		private const float FOOD_DAMAGE = 1.5f;
+		private const float SLEEP_DAMAGE = 1f;
 		private const float SLEEP_GAIN_SITTING = 1f;
 		private const float SLEEP_GAIN_SLEEPING = 100f;
 
