@@ -92,6 +92,10 @@ namespace DrinkWater
 
 			foreach (IMyPlayer player in players)
 			{
+				if (player.IsBot == true)
+				{
+					continue;
+				}
 				MyEntityStatComponent statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
 				if (statComp == null)
 				{
