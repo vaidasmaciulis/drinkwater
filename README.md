@@ -25,11 +25,35 @@ If there are any issues integrating, please let me know.
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2570427696]Plant and Cook[/url]
 
 
+[h1]Configuration[/h1]
+
+This mod can be configured per save game:
+
+Create and save game with this mod added.
+Open Storage directory of your save, i.e.: 
+[code]C:\Users\<User Name>\AppData\Roaming\SpaceEngineers\Saves\<Some number>\<Save Game name>\Storage\2547246713.sbm_DrinkWater
+[/code]
+config.xml file should be inside. 
+Open it with Notepad or other text editor
+Notice there are list of values i.e:
+[code]  <WATER_USAGE>0.03</WATER_USAGE>
+  <FOOD_USAGE>0.015</FOOD_USAGE>
+[/code]
+
+Change values, save file, and load the save game again.
+All values are per 100 ticks (roughly 1 time per second) and max value of the stat is 100.
+So 0.03 water usage means that full water bar will deplete in 100/0.03 = 3333 seconds ~= 1 hour of play time.
+
+
 [h2]FAQ[/h2]
 
 - Does this work with Daily Needs?
 
 No. This mod has entirely different implementation, no integration with Daily Needs is possible.
+
+- Can this be integrated with <some HUD mode>?
+
+It would be easier for HUD mod author to make changes in his mod to integrate with this mod than vise versa. Please ask the author of HUD mod which you are using.
 
 
 [h1]License[/h1]

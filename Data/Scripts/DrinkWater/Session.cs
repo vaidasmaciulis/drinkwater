@@ -25,15 +25,6 @@ namespace DrinkWater
 		private static List<CharacterStats> charactersStats = new List<CharacterStats>();
 		private bool isServer;
 
-		private const float WATER_USAGE = 0.03f;
-		private const float FOOD_USAGE = 0.015f;
-		private const float SLEEP_USAGE = 0.01f;
-		private const float WATER_DAMAGE = 3f;
-		private const float FOOD_DAMAGE = 1.5f;
-		private const float SLEEP_DAMAGE = 1f;
-		private const float SLEEP_GAIN_SITTING = 1f;
-		private const float SLEEP_GAIN_SLEEPING = 34f;
-
 		public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
 		{
 			isServer = MyAPIGateway.Multiplayer.IsServer;
@@ -119,17 +110,17 @@ namespace DrinkWater
 
 				if (water.Value <= 0)
 				{
-					player.Character.DoDamage(WATER_DAMAGE, MyDamageType.Unknown, true);
+					player.Character.DoDamage(Config.statsConfig.WATER_DAMAGE, MyDamageType.Unknown, true);
 				}
 
 				if (food.Value <= 0)
 				{
-					player.Character.DoDamage(FOOD_DAMAGE, MyDamageType.Unknown, true);
+					player.Character.DoDamage(Config.statsConfig.FOOD_DAMAGE, MyDamageType.Unknown, true);
 				}
 
 				if (sleep.Value <= 0)
 				{
-					player.Character.DoDamage(SLEEP_DAMAGE, MyDamageType.Unknown, true);
+					player.Character.DoDamage(Config.statsConfig.SLEEP_DAMAGE, MyDamageType.Unknown, true);
 				}
 
 				bool inCryoOrBed = false;
@@ -140,18 +131,18 @@ namespace DrinkWater
 				{
 					//Sitting, but not working
 					inCryoOrBed = player.Controller.ControlledEntity.ToString().StartsWith("MyCryoChamber");
-					float sleepGain = inCryoOrBed ? SLEEP_GAIN_SLEEPING : SLEEP_GAIN_SITTING;
+					float sleepGain = inCryoOrBed ? Config.statsConfig.SLEEP_GAIN_SLEEPING : Config.statsConfig.SLEEP_GAIN_SITTING;
 					sleep.Increase(sleepGain, null);
 				}
 				else
 				{
-					sleep.Decrease(SLEEP_USAGE, null);
+					sleep.Decrease(Config.statsConfig.SLEEP_USAGE, null);
 				}
 
 				if (!inCryoOrBed)
 				{
-					food.Decrease(FOOD_USAGE, null);
-					water.Decrease(WATER_USAGE, null);
+					food.Decrease(Config.statsConfig.FOOD_USAGE, null);
+					water.Decrease(Config.statsConfig.WATER_USAGE, null);
 				}
 			}
 		}

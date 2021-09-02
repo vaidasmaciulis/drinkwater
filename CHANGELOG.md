@@ -1,3 +1,8 @@
+UPDATE 9/2/2021:
+
+- Sitting sleep regain value has been lowered
+- Stat usage/damage/regain values made configurable
+
 UPDATE 8/25/2021:
 
 - Helmet will stay open for entire food or drink consumption time
