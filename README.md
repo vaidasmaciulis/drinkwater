@@ -25,6 +25,13 @@ If there are any issues integrating, please let me know.
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2570427696]Plant and Cook[/url]
 
 
+[h2]FAQ[/h2]
+
+- Does this work with Daily Needs?
+
+No. This mod has entirely different implementation, no integration with Daily Needs is possible.
+
+
 [h1]License[/h1]
 
 Eat. Drink. Sleep. Repeat! is open-source under GNU GENERAL PUBLIC LICENSE. Check LICENSE file for more details. 
