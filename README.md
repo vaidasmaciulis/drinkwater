@@ -51,7 +51,7 @@ So 0.03 water usage means that full water bar will deplete in 100/0.03 = 3333 se
 
 No. This mod has entirely different implementation, no integration with Daily Needs is possible.
 
-- Can this be integrated with <some HUD mode>?
+- Can this be integrated with <some HUD mod>?
 
 It would be easier for HUD mod author to make changes in his mod to integrate with this mod than vise versa. Please ask the author of HUD mod which you are using.
 
