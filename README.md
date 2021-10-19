@@ -22,7 +22,11 @@ If there are any issues integrating, please let me know.
 
 [h1]Mods that integrates with Eat. Drink. Sleep. Repeat![/h1]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2570427696]Plant and Cook[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2570427696]Plant and Cook[/url] 
+(Add above this mod in the list)
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=2626756831]HUD - Modern and Fancy (Color)[/url]
+(Add above this mod in the list)
 
 
 [h1]Configuration[/h1]
@@ -54,6 +58,10 @@ No. This mod has entirely different implementation, no integration with Daily Ne
 - Can this be integrated with <some HUD mod>?
 
 It would be easier for HUD mod author to make changes in his mod to integrate with this mod than vise versa. Please ask the author of HUD mod which you are using.
+
+- I get "Cant't consume more. Wait untill previous effect ends" notification when eating or drinking.
+
+Auto-healing is probably enabled in the world settings. There is bug in game, where no consumable effects works while auto-healing. Need to either disable auto-healing in world settings or heal to 100% before consuming.
 
 
 [h1]License[/h1]
