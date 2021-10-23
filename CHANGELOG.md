@@ -1,3 +1,7 @@
+UPDATE 10/23/2021:
+
+- Adjusted consumable item sizes, to fit through Small Conveyor ports
+
 UPDATE 9/2/2021:
 
 - Sitting sleep regain value has been lowered

@@ -10,9 +10,9 @@
             <Description>Description_ClangKola</Description>
             <Icon>Textures\GUI\Icons\Items\ClangCola.dds</Icon>
             <Size>
-                <X>0.14</X>
-                <Y>0.43</Y>
-                <Z>0.14</Z>
+                <X>0.1</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
             </Size>
             <Mass>0.5</Mass>
             <Volume>0.5</Volume>
@@ -35,9 +35,9 @@
             <Description>Description_CosmicCoffee</Description>
             <Icon>Textures\GUI\Icons\Items\CosmicCoffee.dds</Icon>
             <Size>
-                <X>0.14</X>
-                <Y>0.43</Y>
-                <Z>0.14</Z>
+                <X>0.1</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
             </Size>
             <Mass>0.5</Mass>
             <Volume>0.5</Volume>
@@ -61,9 +61,9 @@
             <Description>Just freshly made out of spacedust. Like we all.</Description>
             <Icon>Textures\GUI\Icons\Items\SparklingWat.dds</Icon>
             <Size>
-                <X>0.14</X>
-                <Y>0.43</Y>
-                <Z>0.14</Z>
+                <X>0.1</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
             </Size>
             <Mass>0.5</Mass>
             <Volume>0.5</Volume>
@@ -86,9 +86,9 @@
             <Description>It's always 5pm somewhere in space.</Description>
             <Icon>Textures\GUI\Icons\Items\InterBeer.dds</Icon>
             <Size>
-                <X>0.14</X>
-                <Y>0.43</Y>
-                <Z>0.14</Z>
+                <X>0.1</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
             </Size>
             <Mass>0.5</Mass>
             <Volume>0.5</Volume>
@@ -113,9 +113,9 @@
             <Description>When you expect food, but get air instead, but it's space so that's actaully good.</Description>
             <Icon>Textures\GUI\Icons\Items\LaysChips.dds</Icon>
             <Size>
-                <X>0.14</X>
-                <Y>0.43</Y>
-                <Z>0.14</Z>
+                <X>0.1</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
             </Size>
             <Mass>0.3</Mass>
             <Volume>1</Volume>
@@ -137,9 +137,9 @@
             <Description>Feeling all alone in outer space? Eat some chips.</Description>
             <Icon>Textures\GUI\Icons\Items\PrlnglesChips.dds</Icon>
             <Size>
-                <X>0.14</X>
-                <Y>0.43</Y>
-                <Z>0.14</Z>
+                <X>0.1</X>
+                <Y>0.2</Y>
+                <Z>0.1</Z>
             </Size>
             <Mass>0.3</Mass>
             <Volume>1</Volume>

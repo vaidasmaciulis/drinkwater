@@ -63,6 +63,10 @@ It would be easier for HUD mod author to make changes in his mod to integrate wi
 
 Auto-healing is probably enabled in the world settings. There is bug in game, where no consumable effects works while auto-healing. Need to either disable auto-healing in world settings or heal to 100% before consuming.
 
+- Can not purchase items (Cola and Coffee) in dispenser block.
+
+This is intended behavior. It is done to improve immersion, as you are just using iron/etc components to build dispenser, so there is no way for drinks to appear there realistically. You can still buy items in dispensers in Economy Stations.
+
 
 [h1]License[/h1]
 
