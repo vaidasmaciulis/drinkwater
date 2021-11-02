@@ -1,6 +1,3 @@
-# Eat. Drink. Sleep. Repeat!
-https://steamcommunity.com/sharedfiles/filedetails/?id=2547246713
-
 [h1]Intro[/h1]
 
 Three new stat mechanics are added to the game: Water, Food and Sleep.
@@ -27,6 +24,8 @@ If there are any issues integrating, please let me know.
 
 [url=https://steamcommunity.com/workshop/filedetails/?id=2626756831]HUD - Modern and Fancy (Color)[/url]
 (Add above this mod in the list)
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2614888731]Industrial Overhaul and Eat. Drink. Sleep.[/url]
 
 
 [h1]Configuration[/h1]
