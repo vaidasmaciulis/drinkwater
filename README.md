@@ -67,11 +67,10 @@ Auto-healing is probably enabled in the world settings. There is bug in game, wh
 This is intended behavior. It is done to improve immersion, as you are just using iron/etc components to build dispenser, so there is no way for drinks to appear there realistically. You can still buy items in dispensers in Economy Stations.
 
 
-[h1]License[/h1]
+[h1]Acknowledgements[/h1]
 
-Eat. Drink. Sleep. Repeat! is open-source under GNU GENERAL PUBLIC LICENSE. Check LICENSE file for more details. 
-TL;DR: you can use anything from this mod in your own creations, as long as they are also open-source and link to this mod is provided in description. 
-However, it is highly recommended to integrate with this mod instead of copying the code.
+Emergency Ration Production Unit block is made by Kuvat. Check out his other mods:
+https://steamcommunity.com/profiles/76561198116768722/myworkshopfiles/
 
 3D models used in the mod:
 
@@ -80,3 +79,12 @@ https://3dexport.com/free-3dmodel-chips-lays-classic-292494.htm
 
 Prlngles Snack Chips by Kutejnikov
 https://www.turbosquid.com/FullPreview/Index.cfm/ID/1090963
+
+
+[h1]License[/h1]
+
+Eat. Drink. Sleep. Repeat! is open-source under GNU GENERAL PUBLIC LICENSE. Check LICENSE file for more details. 
+TL;DR: you can use anything from this mod in your own creations, as long as they are also open-source and link to this mod is provided in description. 
+However, it is highly recommended to integrate with this mod instead of copying the code.
+
+Git repository of the mod: https://github.com/vaidasmaciulis/drinkwater
