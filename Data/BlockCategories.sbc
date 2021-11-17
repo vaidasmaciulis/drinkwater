@@ -6,6 +6,18 @@
                 <TypeId>GuiBlockCategoryDefinition</TypeId>
                 <SubtypeId/>
             </Id>
+            <DisplayName>Eat. Drink. Sleep. Repeat!</DisplayName>
+            <Name>EDSR</Name>
+            <StrictSearch>true</StrictSearch>
+            <ItemIds>
+                <string>Assembler/Emergency_Foodproduction</string>
+            </ItemIds>
+        </Category>
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+            <Id>
+                <TypeId>GuiBlockCategoryDefinition</TypeId>
+                <SubtypeId/>
+            </Id>
             <DisplayName>DisplayName_Category_Consumables</DisplayName>
             <Name>Consumables</Name>
             <SearchBlocks>false</SearchBlocks>
@@ -19,6 +31,7 @@
                 <string>InterBeer</string>
                 <string>LaysChips</string>
                 <string>PrlnglesChips</string>
+                <string>Emergency_Ration</string>
             </ItemIds>
         </Category>
     </CategoryClasses>

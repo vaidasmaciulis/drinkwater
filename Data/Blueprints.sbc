@@ -15,5 +15,36 @@
       <Result Amount="1" TypeId="ConsumableItem" SubtypeId="SparklingWater" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
     </Blueprint> 
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SparklingWaterTinCan</SubtypeId>
+      </Id>
+      <DisplayName>Sparkling Water</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\SparklingWat.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+        <Item Amount="1" TypeId="Component" SubtypeId="EmptyTinCan" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="ConsumableItem" SubtypeId="SparklingWater" />
+      <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Emergency_Ration</SubtypeId>
+      </Id>
+      <DisplayName>Emergency Ration</DisplayName>
+      <Description>The Emergency Ration is made out of trace organic elements found in Gravel and Ice.</Description>
+      <Icon>Textures\GUI\Icons\Items\Emergency_Ration.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Stone" />
+        <Item Amount="5" TypeId="Ore" SubtypeId="Ice" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="ConsumableItem" SubtypeId="Emergency_Ration" />
+      <BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+    </Blueprint>
   </Blueprints>
 </Definitions>

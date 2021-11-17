@@ -1,3 +1,8 @@
+UPDATE 11/17/2021:
+
+- Added Emergency Ration Production Unit block (small grid)
+- Added Emergency Ration consumable item.
+
 UPDATE 10/23/2021:
 
 - Adjusted consumable item sizes, to fit through Small Conveyor ports

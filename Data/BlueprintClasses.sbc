@@ -1,8 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlueprintClasses>
+    <Class>
+      <Id>
+        <TypeId>BlueprintClassDefinition</TypeId>
+        <SubtypeId>Emergency</SubtypeId>
+      </Id>
+      <DisplayName>Emergency</DisplayName>
+      <Description>Emergency</Description>
+      <Icon>Textures\GUI\Icons\Items\Emergency_Ration.dds</Icon>
+      <HighlightIcon>Textures\GUI\Icons\Items\Emergency_Ration.dds</HighlightIcon>
+      <FocusIcon>Textures\GUI\Icons\Items\Emergency_Ration.dds</FocusIcon>
+      <InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+    </Class>
+  </BlueprintClasses>
   <BlueprintClassEntries>
-    <Entry Class="BasicComponents" BlueprintSubtypeId="SparklingWater" />
     <Entry Class="Consumables" BlueprintSubtypeId="SparklingWater" />
     <Entry Class="EliteConsumables" BlueprintSubtypeId="SparklingWater" />
+
+    <Entry Class="Emergency" BlueprintSubtypeId="SparklingWaterTinCan" />
+    <Entry Class="Emergency" BlueprintSubtypeId="Emergency_Ration" />
+
+    <Entry Class="SmallBlocks" BlueprintSubtypeId="Assembler/Emergency_Foodproduction" />
   </BlueprintClassEntries>
 </Definitions>

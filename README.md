@@ -3,9 +3,9 @@
 Three new stat mechanics are added to the game: Water, Food and Sleep.
 
 To restore food and water stats you have to use consumable items, like Clang Kola and Cosmic Coffee.
-4 new consumable items are added: Water, Beer and two kinds of potato chips.
-You can buy these items in the economy station, or find them in a drop pod.
-Water can is also producible in assembler, using iron and ice.
+5 new consumable items are added: Emergency Ration, Water, Beer and two kinds of potato chips.
+Emergency Ratio and Water is producible in Emergency Ration Production Unit.
+You can buy other items in the economy station, or find them in a drop pod.
 You can get some sleep by sitting in a non controllable seat (slowly), laying in the bed or cryo chamber (fast) or just drinking Coffee.
 
 
