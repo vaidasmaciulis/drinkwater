@@ -8,7 +8,7 @@
       </Id>
       <Name>Water</Name>
       <MinValue>0</MinValue>
-      <DefaultValue>30</DefaultValue>
+      <DefaultValue>100</DefaultValue>
       <MaxValue>100</MaxValue>
     </Stat>
     <Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
@@ -18,7 +18,7 @@
       </Id>
       <Name>Food</Name>
       <MinValue>0</MinValue>
-      <DefaultValue>30</DefaultValue>
+      <DefaultValue>100</DefaultValue>
       <MaxValue>100</MaxValue>
     </Stat>
     <Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
@@ -28,7 +28,7 @@
       </Id>
       <Name>Sleep</Name>
       <MinValue>0</MinValue>
-      <DefaultValue>30</DefaultValue>
+      <DefaultValue>100</DefaultValue>
       <MaxValue>100</MaxValue>
     </Stat>
   </StatDefinitions>

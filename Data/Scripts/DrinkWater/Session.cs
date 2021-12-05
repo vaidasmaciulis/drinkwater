@@ -1,4 +1,5 @@
-﻿using Sandbox.Game.Components;
+﻿using Sandbox.Game;
+using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace DrinkWater
 	{
 		private static int skippedTicks = 0;
 		private static List<IMyPlayer> players = new List<IMyPlayer>();
+		private static List<long> justSpawned = new List<long>();
 		private static List<CharacterStats> charactersStats = new List<CharacterStats>();
 		private bool isServer;
 
@@ -32,6 +34,10 @@ namespace DrinkWater
 			{
 				return;
 			}
+			MyVisualScriptLogicProvider.PlayerSpawned += (playerId) =>
+			{
+				justSpawned.Add(playerId);
+			};
 			UpdateAfterSimulation100();
 		}
 
@@ -143,6 +149,14 @@ namespace DrinkWater
 				{
 					food.Decrease(Config.statsConfig.FOOD_USAGE, null);
 					water.Decrease(Config.statsConfig.WATER_USAGE, null);
+				}
+
+				if (justSpawned.Contains(player.IdentityId))
+				{
+					sleep.Value = 10f;
+					food.Value = 10f;
+					water.Value = 10f;
+					justSpawned.Remove(player.IdentityId);
 				}
 			}
 		}

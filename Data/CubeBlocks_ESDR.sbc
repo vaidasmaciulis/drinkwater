@@ -24,9 +24,8 @@
         <Component Subtype="Computer" Count="10" />
         <Component Subtype="Display" Count="1" />
         <Component Subtype="SteelPlate" Count="8" />
-        <Component Subtype="BulletproofGlass" Count="2" />
       </Components>
-      <CriticalComponent Subtype="BulletproofGlass" Index="0" />
+      <CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.00" EndY="3.00"/>
 				<MountPoint Side="Back" StartX="1.50" StartY="0.00" EndX="2.00" EndY="3.00"/>
