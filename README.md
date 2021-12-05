@@ -27,6 +27,8 @@ If there are any issues integrating, please let me know.
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2614888731]Industrial Overhaul and Eat. Drink. Sleep.[/url]
 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230632087]Ultimate Small Grid Conversion Pack[/url]
+
 
 [h1]Configuration[/h1]
 

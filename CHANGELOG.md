@@ -1,3 +1,9 @@
+UPDATE 12/5/2021:
+
+- Survival stats will be filled to 100% for the first spawn, and drop to 10% on respawns
+- Building Emergency Food Unit does not require Glass any more
+- Bug Fix: Small grid dispenser will not provide drinks any more
+
 UPDATE 11/17/2021:
 
 - Added Emergency Ration Production Unit block (small grid)
