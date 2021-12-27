@@ -1,3 +1,8 @@
+UPDATE 12/27/2021:
+
+- Respawn values of Water/Food/Sleep made configurable
+- Fixed bug where Sparkling Water required N/A in Emergency Food Unit.
+
 UPDATE 12/5/2021:
 
 - Survival stats will be filled to 100% for the first spawn, and drop to 10% on respawns
