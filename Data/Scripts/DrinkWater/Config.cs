@@ -21,6 +21,9 @@ namespace DrinkWater
 		public float SLEEP_DAMAGE;
 		public float SLEEP_GAIN_SITTING;
 		public float SLEEP_GAIN_SLEEPING;
+		public float RESPAWN_WATER;
+		public float RESPAWN_FOOD;
+		public float RESPAWN_SLEEP;
 	}
 
 	[MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
@@ -36,6 +39,9 @@ namespace DrinkWater
 			SLEEP_DAMAGE = 1f,
 			SLEEP_GAIN_SITTING = 0.5f,
 			SLEEP_GAIN_SLEEPING = 34f,
+			RESPAWN_WATER = 10f,
+			RESPAWN_FOOD = 10f,
+			RESPAWN_SLEEP = 10f,
 		};
 
 		public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
@@ -46,7 +52,7 @@ namespace DrinkWater
 			}
 			try
 			{
-				string configFileName = "config.xml";
+				string configFileName = "config_2_14.xml";
 				if (MyAPIGateway.Utilities.FileExistsInWorldStorage(configFileName, typeof(StatsConfig)))
 				{
 					var textReader = MyAPIGateway.Utilities.ReadFileInWorldStorage(configFileName, typeof(StatsConfig));

@@ -25,6 +25,8 @@ If there are any issues integrating, please let me know.
 [url=https://steamcommunity.com/workshop/filedetails/?id=2626756831]HUD - Modern and Fancy (Color)[/url]
 (Add above this mod in the list)
 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683816256]E.D.S.R. Color Hud (1.199)[/url]
+
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2614888731]Industrial Overhaul and Eat. Drink. Sleep.[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2230632087]Ultimate Small Grid Conversion Pack[/url]
@@ -38,7 +40,7 @@ Create and save game with this mod added.
 Open Storage directory of your save, i.e.: 
 [code]C:\Users\<User Name>\AppData\Roaming\SpaceEngineers\Saves\<Some number>\<Save Game name>\Storage\2547246713.sbm_DrinkWater
 [/code]
-config.xml file should be inside. 
+config_2_14.xml file should be inside. 
 Open it with Notepad or other text editor
 Notice there are list of values i.e:
 [code]  <WATER_USAGE>0.03</WATER_USAGE>

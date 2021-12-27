@@ -153,9 +153,9 @@ namespace DrinkWater
 
 				if (justSpawned.Contains(player.IdentityId))
 				{
-					sleep.Value = 10f;
-					food.Value = 10f;
-					water.Value = 10f;
+					sleep.Value = Config.statsConfig.RESPAWN_SLEEP;
+					food.Value = Config.statsConfig.RESPAWN_FOOD;
+					water.Value = Config.statsConfig.RESPAWN_WATER;
 					justSpawned.Remove(player.IdentityId);
 				}
 			}
