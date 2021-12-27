@@ -18,7 +18,7 @@
     <Entry Class="Consumables" BlueprintSubtypeId="SparklingWater" />
     <Entry Class="EliteConsumables" BlueprintSubtypeId="SparklingWater" />
 
-    <Entry Class="Emergency" BlueprintSubtypeId="SparklingWaterTinCan" />
+    <Entry Class="Emergency" BlueprintSubtypeId="SparklingWater" />
     <Entry Class="Emergency" BlueprintSubtypeId="Emergency_Ration" />
 
     <Entry Class="SmallBlocks" BlueprintSubtypeId="Assembler/Emergency_Foodproduction" />
