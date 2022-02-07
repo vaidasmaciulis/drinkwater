@@ -12,6 +12,7 @@ namespace DrinkWater
 {
 	public struct CharacterStats
 	{
+		public long playerId;
 		public IMyCharacter character;
 		public MyEntityStat water;
 		public MyEntityStat food;
@@ -70,12 +71,12 @@ namespace DrinkWater
 					if (characterStats.water.HasAnyEffect())
 					{
 						characterStats.character.SwitchHelmet();
-						MyAPIGateway.Utilities.ShowNotification("Helmet opened to drink!", 3000);
+						MyVisualScriptLogicProvider.ShowNotification("Helmet opened to drink!", 3000, playerId: characterStats.playerId);
 					}
 					else if (characterStats.food.HasAnyEffect())
 					{
 						characterStats.character.SwitchHelmet();
-						MyAPIGateway.Utilities.ShowNotification("Helmet opened to eat!", 3000);
+						MyVisualScriptLogicProvider.ShowNotification("Helmet opened to eat!", 3000, playerId: characterStats.playerId);
 					}
 				}
 			}
@@ -108,6 +109,7 @@ namespace DrinkWater
 
 				charactersStats.Add(new CharacterStats
 				{
+					playerId = player.IdentityId,
 					character = player.Character,
 					water = water,
 					food = food,
