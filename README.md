@@ -26,6 +26,7 @@ If there are any issues integrating, please let me know.
 (Add above this mod in the list)
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683816256]E.D.S.R. Color Hud (1.199)[/url]
+(Add above this mod in the list)
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2614888731]Industrial Overhaul and Eat. Drink. Sleep.[/url]
 
