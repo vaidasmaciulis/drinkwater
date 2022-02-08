@@ -1,3 +1,10 @@
+UPDATE 2/8/2022:
+
+- Added food and water to respawn pods
+- HUD fixed for Warfare 2 - target circles now visible.
+- Fixed bug where "Helmet opened to drink!" notification was shown for host instead of client in MP.
+- Autohealing now gets automatically disabled, to avoid annoying bug, where you can't eat while autohealing.
+
 UPDATE 12/27/2021:
 
 - Respawn values of Water/Food/Sleep made configurable
