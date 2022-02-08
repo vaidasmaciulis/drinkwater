@@ -39,6 +39,7 @@ namespace DrinkWater
 			{
 				justSpawned.Add(playerId);
 			};
+			MyAPIGateway.Session.SessionSettings.AutoHealing = false;
 			UpdateAfterSimulation100();
 		}
 
