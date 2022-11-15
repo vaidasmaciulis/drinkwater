@@ -1,5 +1,3 @@
-[h1]Intro[/h1]
-
 Three new stat mechanics are added to the game: Water, Food and Sleep.
 
 To restore food and water stats you have to use consumable items, like Clang Kola and Cosmic Coffee.
